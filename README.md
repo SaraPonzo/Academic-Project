@@ -4,3 +4,4 @@ This repository collects the academic projects developed in collaboration with c
 
 # Included Project:
 
+Volatility Modeling for ENI (2010-2014): GARCH Family vs Stochastic Volatility with EVT on Tail Risk.
