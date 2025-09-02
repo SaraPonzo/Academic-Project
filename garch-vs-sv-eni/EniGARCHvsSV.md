@@ -1,9 +1,6 @@
-Caso_Ponzo_GARCHvsSV
-================
-Sara Ponzo
-2025-05-04
 
-## TASK : Make a comparison between GARCH and stochastic volatility models.
+
+##  Make a comparison between GARCH and stochastic volatility models.
 
 To accomplish the task we have decided to analyse the behavior of ENI
 over the 2010-2024 period by:
@@ -1416,4 +1413,5 @@ For the monthly maximum:
 
 Even for the maximum distribution, the fitted GEV model offers a good
 first-order approximation for ENI’s returns.
+
 
