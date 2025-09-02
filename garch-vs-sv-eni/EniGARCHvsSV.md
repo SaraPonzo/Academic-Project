@@ -1416,3 +1416,4 @@ For the monthly maximum:
 
 Even for the maximum distribution, the fitted GEV model offers a good
 first-order approximation for ENI’s returns.
+
