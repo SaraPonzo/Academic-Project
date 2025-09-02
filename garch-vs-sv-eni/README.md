@@ -2,12 +2,12 @@
 This project studies ENI’s daily return volatility over 2010–2024 by comparing **GARCH-family** models (sGARCH, EGARCH, GJR) with **Stochastic Volatility (SV)** specifications (including leverage and heavy-tailed). Using log returns, we estimate each model and generate one-step-ahead volatility forecasts. Performance is evaluated via **AIC**, **RMSE** against a realized-volatility proxy, and **risk backtesting** (VaR/ES). We also apply **changepoint detection (PELT)** to identify volatility clusters and use **Extreme Value Theory (GEV)** on monthly maxima/minima to characterize tail risk.
 
 ---
-
+###Volatility Modeling for ENI (2010-2014): GARCH Family vs Stochastic Volatility with EVT on Tail Risk
 ---
 
 ## TASK : Make a comparison between GARCH and stochastic volatility models.
 
-To accomplish the task we have decided to analyse the behavior of ENI
+To accomplish the task, we have decided to analyse the behavior of ENI
 over the 2010-2024 period by:
 
 1.  Fitting 3 types of GARCH : standard, exponential and gjr.
