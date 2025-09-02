@@ -258,7 +258,7 @@ colnames(vol_df) <- c("Date", "RealizedVol")
 Then, we ploy the realized rolling volatility to make a first visual
 check.
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/pressure-1.png)<!-- -->
+![test](./README_files/figure-gfm/pressure-1.png)
 
 From the plot we can see that volatility is not constant, in fact it
 clusters in time which is ideal for using these types of models.
@@ -454,7 +454,7 @@ ggplot(melted, aes(x = Day, y = value, color = variable)) +
     ## This warning is displayed once every 8 hours.
     ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-9-1.png)
 
 The predictions highlight an increase in volatility over the next 60
 days for all the considered models.
@@ -525,8 +525,7 @@ summary(cpt)
 ``` r
 plot(cpt, main = "Change points of the variance of returns")
 ```
-
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-10-1.png)
 
 ``` r
 changepoints <- cpts(cpt)
@@ -772,7 +771,7 @@ sy_lev=summary(sv_lev)$estimate[1]
 plot(sy_lev*exp(h_lev/2), type="l")
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-15-1.png)
 
 2.  **SV t-distribution model**
 
@@ -784,7 +783,7 @@ sy_t=summary(sv_t)$estimate[1]
 plot(sy_t*exp(h_t/2), type="l")
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-16-1.png)
 
 ``` r
 min_len_lev <- min(length(as.numeric(sy_lev*exp(h_lev/2))), length(realized_vol), length(returns))
@@ -827,7 +826,8 @@ p1/p2
     ## Warning: Removed 20 rows containing missing values or values outside the scale range (`geom_line()`).
     ## Removed 20 rows containing missing values or values outside the scale range (`geom_line()`).
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-17-1.png)
+
 
 3.  **GARCH models**
 
@@ -842,7 +842,8 @@ egarch_vol <- sigma(egarch_fit)
 plot(egarch_vol, type="l")
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-18-1.png)
+
 
 ``` r
 min_len <- min(length(egarch_vol), length(realized_vol), length(returns))
@@ -866,7 +867,7 @@ gjr_vol<-sigma(gjr_fit)
 plot(gjr_vol)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-18-2.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-18-2.png)
 
 ``` r
 min_len <- min(length(gjr_vol), length(realized_vol), length(returns))
@@ -891,7 +892,8 @@ garch_vol<-sigma(garch_fit)
 plot(garch_vol)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-18-3.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-18-3.png)
+
 
 ``` r
 min_len <- min(length(garch_vol), length(realized_vol), length(returns))
@@ -919,7 +921,7 @@ p3/p4/p5
     ## Removed 20 rows containing missing values or values outside the scale range (`geom_line()`).
     ## Removed 20 rows containing missing values or values outside the scale range (`geom_line()`).
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-18-4.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-18-4.png)
 
 ## **Backtesting the model and analyzing the violations**
 
@@ -956,7 +958,8 @@ points(viol_lower, y[viol_lower], col = "red", pch = 16)
 points(viol_upper, y[viol_upper], col = "blue", pch = 16)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-19-1.png)
+
 
 ``` r
 y <- as.numeric(returns)
@@ -978,7 +981,8 @@ points(viol_lower, y[viol_lower], col = "red", pch = 16)
 points(viol_upper, y[viol_upper], col = "blue", pch = 16)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-20-1.png)
+
 
 ``` r
 y <- as.numeric(returns)
@@ -1000,7 +1004,8 @@ points(viol_lower, y[viol_lower], col = "red", pch = 16)
 points(viol_upper, y[viol_upper], col = "blue", pch = 16)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-21-1.png)
+
 
 ``` r
 df_upper_viol <- data.frame(
@@ -1083,7 +1088,8 @@ points(viol_lower, y[viol_lower], col = "red", pch = 16)
 points(viol_upper, y[viol_upper], col = "blue", pch = 16)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-23-1.png)
+
 
 ``` r
 y <- as.numeric(returns)
@@ -1105,7 +1111,8 @@ points(viol_lower, y[viol_lower], col = "red", pch = 16)
 points(viol_upper, y[viol_upper], col = "blue", pch = 16)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-24-1.png)
+
 
 ``` r
 df_upper_viol <- data.frame(
@@ -1207,8 +1214,10 @@ where $G(x)$ is a non-degenerate limit distribution belonging to the
 function of the GEV is given by:
 
 $$
-G(x) = \exp \left\{ -\left[ 1 + \xi \left( \frac{x - \mu}{\sigma} \right) \right]^{-1/\xi} \right\}, \quad \text{for } 1 + \xi \left( \frac{x - \mu}{\sigma} \right) > 0,
+G(x)=\exp\left(-\left[1+\xi\left(\frac{x-\mu}{\sigma}\right)\right]^{-1/\xi}\right),
+\qquad 1+\xi\left(\frac{x-\mu}{\sigma}\right)>0 .
 $$
+
 
 and is characterized by three parameters:
 
@@ -1243,14 +1252,15 @@ monthly_minima <- tapply(-100 * returns, FUN = max, INDEX = year_month)
 monthly_maximum <- tapply(100 * returns, FUN = max, INDEX = year_month)
 hist(monthly_minima)
 ```
+![test](./README_files/figure-gfm/unnamed-chunk-26-1.png)
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ``` r
 hist(monthly_maximum)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-26-2.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-26-2.png)
+
 
 ``` r
 plot(monthly_maximum,
@@ -1263,7 +1273,8 @@ plot(monthly_maximum,
      cex.axis = 0.7)  
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-26-3.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-26-3.png)
+
 
 ``` r
 plot(monthly_minima,
@@ -1276,7 +1287,8 @@ plot(monthly_minima,
      cex.axis = 0.7)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-26-4.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-26-4.png)
+
 
 After diving the series into block, and estracting the maximum and the
 minimum for each month ow we proceed to fit the GEV to our series:
@@ -1337,13 +1349,15 @@ confirming the robustness of the estimates.
 gev.diag(myfit_min)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-28-1.png)
+
 
 ``` r
 gev.diag(myfit_max)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/garch_vs_sv_eni/README_files/figure-gfm/unnamed-chunk-28-2.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-28-2.png)
+
 
 After fitting the GEV, we assessed the reliability of the results with a
 series of disgnostic plots produced by the gev.diag() function.
@@ -1413,5 +1427,6 @@ For the monthly maximum:
 
 Even for the maximum distribution, the fitted GEV model offers a good
 first-order approximation for ENI’s returns.
+
 
 
