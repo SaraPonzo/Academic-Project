@@ -1,7 +1,3 @@
-HW02_TS_SARA_AGATA
-================
-Sara Ponzo, Agata Caso
-2024-12-28
 
 ### TASK 1
 
@@ -1472,3 +1468,4 @@ strategy. Additionally, comparing the results of the implemented agACI
 and standard ACI there’s an improvement in the errors so computed. This
 can suggest us that the proposed aggregation algorithm provides
 efficient prediction intervals for volatility of returns.
+
