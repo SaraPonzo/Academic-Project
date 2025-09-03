@@ -522,8 +522,7 @@ abline(h = 0.95, col = "black", lty = 2)  # Target coverage level
 legend("bottomright", legend = c("Standard simple scores","Standard normalized scores"),
                                  col = c("blue","red"), lty = 1,cex=0.6)
 ```
-
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-5-1.png)
 
 ``` r
 plot(time, adGARCH2_normal_loccov, type = "l", col = "blue",lwd = 2,
@@ -535,8 +534,7 @@ legend("bottomright", legend = c("Adaptive eq.(2) normalized scores","Adaptive e
        col = c("blue", "red","green"), lty = 1,cex=0.5)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
-
+![test](./README_files/figure-gfm/unnamed-chunk-5-2.png)
 ``` r
 plot(time, stGJR_simple_local_cov, type = "l", col = "blue",lwd = 2,
      main = "standard gjrGarch Local Coverage Rates: AAPL Stock", xlab = "Time", ylab = "Local Coverage Level", ylim = c(0.5,1))
@@ -546,7 +544,7 @@ legend("bottomright", legend = c("Standard simple scores","Standard normalized s
                                  col = c("blue","red"), lty = 1,cex=0.6)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-5-3.png)
 
 ``` r
 plot(time, adGJR2_normal_loccov, type = "l", col = "blue",lwd = 2,
@@ -558,9 +556,9 @@ legend("bottomright", legend = c("Adaptive eq.(2) normalized scores","Adaptive e
        col = c("blue", "red","green"), lty = 1,cex=0.5)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-5-4.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-5-4.png)
 
-To understand better the behaviour of alpha and the differences between
+To better understand the behaviour of alpha and the differences between
 the various updating method and their error we have plotted the
 ‘errSeqNC’ VS the ‘errSeqOC’ for each strategy. On the X-axis of the
 plot we have the time, on the Y-axis we have the local coverage
@@ -755,7 +753,7 @@ legend("bottomright", legend = c("Standard simple scores","Standard normalized s
                                  col = c("blue","red"), lty = 1,cex=0.6)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-6-1.png)
 
 ``` r
 plot(time, adGARCH2_normal_loccov, type = "l", col = "blue",lwd = 2,
@@ -767,7 +765,7 @@ legend("bottomright", legend = c("Adaptive eq.(2) normalized scores","Adaptive e
        col = c("blue", "red","green"), lty = 1,cex=0.5)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-6-2.png)
 
 ``` r
 plot(time, stGJR_simple_local_cov, type = "l", col = "blue",lwd = 2,
@@ -777,8 +775,7 @@ abline(h = 0.95, col = "black", lty = 2)  # Target coverage level
 legend("bottomright", legend = c("Standard simple scores","Standard normalized scores"),
                                  col = c("blue","red"), lty = 1,cex=0.6)
 ```
-
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-6-3.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-6-3.png)
 
 ``` r
 plot(time, adGJR2_normal_loccov, type = "l", col = "blue",lwd = 2,
@@ -790,7 +787,7 @@ legend("bottomright", legend = c("Adaptive eq.(2) normalized scores","Adaptive e
        col = c("blue", "red","green"), lty = 1,cex=0.5)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-6-4.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-6-4.png)
 
 From the plots and the mean of the error sequences we could see that
 this latter is greater if we choose a higher $\gamma$ value. The
@@ -1245,7 +1242,7 @@ ggplot(results_df, aes(x = Date)) +
   scale_color_manual(values = c("Actual" = "black", "Lower Bound" = "blue", "Upper Bound" = "red"))
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-7-1.png)
 
 ``` r
 results_adaptive_EQ2 = garchConformalForcasting(returns,alpha = 0.05, lookback = 1250, garchP = 1, garchQ = 1, startUp = 100, verbose = FALSE, updateMethod = "Simple", momentumBW = 0.95, agg_model = "BOA")
@@ -1319,7 +1316,7 @@ ggplot(results_df_EQ2, aes(x = Date)) +
   scale_color_manual(values = c("Actual" = "black", "Lower Bound" = "blue", "Upper Bound" = "red"))
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-7-2.png)
 
 ``` r
 results_adaptive_EQ3 = garchConformalForcasting(returns,alpha = 0.05, lookback = 1250, garchP = 1, garchQ = 1, startUp = 100, verbose = FALSE, updateMethod = "Momentum", momentumBW = 0.95, agg_model = "BOA")
@@ -1391,7 +1388,7 @@ ggplot(results_df_EQ3, aes(x = Date)) +
   scale_color_manual(values = c("Actual" = "black", "Lower Bound" = "blue", "Upper Bound" = "red"))
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-7-3.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-7-3.png)
 
 ### INTERPRETATION OF THE PLOTS
 
@@ -1435,7 +1432,7 @@ legend("bottomright", legend = c("Standard simple scores","Standard normalized s
                                  col = c("blue","red"), lty = 1,cex=0.6)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-8-1.png)
 
 ``` r
 plot(time, adGARCH2_normal_loccov, type = "l", col = "blue",lwd = 2,
@@ -1447,7 +1444,7 @@ legend("bottomright", legend = c("Adaptive eq.(2) normalized scores","Adaptive e
        col = c("blue", "red","green"), lty = 1,cex=0.5)
 ```
 
-![](C:/Users/sarap/OneDrive/Documenti/GitHub/Academic-Projects/Conformal_Inference/README_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![test](./README_files/figure-gfm/unnamed-chunk-8-2.png)
 
 To test the performance of the agACI for the GARCH we can look at the
 errors sequences plotted. We can see that for the standard CP following
@@ -1468,4 +1465,5 @@ strategy. Additionally, comparing the results of the implemented agACI
 and standard ACI there’s an improvement in the errors so computed. This
 can suggest us that the proposed aggregation algorithm provides
 efficient prediction intervals for volatility of returns.
+
 
