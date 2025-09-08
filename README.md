@@ -11,4 +11,4 @@ Welcome! This repository collects **my academic projects**, both individual and 
 
 - **[Conformal Inference — Distribution-Free Uncertainty Quantification](./conformal-inference/)**  
   *Abstract.* This project implements **split/inductive conformal prediction** to obtain distribution-free **(1 − α)** coverage under exchangeability. For regression we use **Conformalized Quantile Regression (CQR)** to handle heteroscedastic noise; for classification we build **set-valued (top-k)** predictions from softmax scores. We include **Mondrian (class-conditional)** and **normalized** nonconformity scores to stabilize interval widths across strata, plus rolling/blocked variants for **time-series**. Evaluation covers **empirical coverage**, **interval width / set size**, and the **efficiency–coverage trade-off**, with stress tests under covariate shift.
-  Report: `./conformal-inference/report/Conformal_Inference.html`
+*Report:* `./conformal-inference/report/Conformal_Inference.html`
